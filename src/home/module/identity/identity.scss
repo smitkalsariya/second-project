@@ -1,0 +1,178 @@
+@import '../../../styles/main.scss';
+
+.identity {
+
+    padding-bottom: 60px;
+    @media (max-width:576px) {
+        padding-bottom: 30px;
+    }
+
+    span {
+        @include font12;
+
+        @media (max-width:768px) {
+            padding: 0 8px;
+            @include font12;
+            max-width: 175px;
+            display: block;
+        }
+       
+    }
+
+    .identity-title {
+        @include flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 40px;
+        border-bottom: 4px solid var(--theme-border-color);
+        
+            @media (max-width:768px) {
+            padding: 0 8px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--theme-border-color);
+
+        }
+
+        h4 {
+            @include font64;
+            @media (max-width:768px) {
+                @include font34;
+            }
+            
+        }
+
+        .identity-rat{
+            background-color: var(--theme-transparent-color);
+            padding: 8px 24px;
+            border: 2px solid var(--theme-border-color);
+            border-radius: 50px;
+            @include font24;
+        }
+    }
+
+    .identity-card {
+        @include grid;
+        grid-template-columns: 1fr 699px;
+        gap: 32px;
+        padding-top: 40px;
+
+        @media (max-width:768px) {
+            @include flex;
+            flex-direction: column-reverse;
+        }
+
+        .identity-card-detailes {
+            @media (max-width:768px) {
+                @include flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                max-width: 466px;
+                padding: 0 11px;
+            }
+
+            h6 {
+                @include font18;
+                font-weight: 700;
+                margin-bottom: 16px;
+
+                @media (max-width:768px) {
+                    @include font18;
+                    font-weight: 700;
+                }
+            }
+
+            p {
+                @include font18;
+                font-weight: 300;
+                margin-bottom: 28px;
+
+                @media (max-width:768px) {
+                    @include font16;
+                    font-weight: 300;
+                }
+            }
+
+            .identity-card-iconimage {
+                width: 28px;
+                height: 30px;
+                padding-bottom: 28px;
+            }
+
+            .identity-card-borderbottom {
+                border-bottom: 2px solid var(--theme-border-color);
+                padding-bottom: 28px;
+
+                @media (max-width:768px) {
+                    border-bottom: 0;
+                }
+            }
+        }
+            .identity-card-image{
+                img{
+                    @media (max-width:768px) {
+                        height: 244px;
+                        object-fit: cover;
+                    }
+                }
+        }
+    }
+}
+
+.overview {
+    background: #f8f8f8;
+    width: 100%;
+    padding: 26px 0;
+
+    .overview-grid {
+        @include grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 148px;
+
+        @media (max-width:768px) {
+            padding: 0 11px;
+            gap: 15px;
+        }
+        @media (max-width:900px) {
+            gap: 110px;
+        }
+        @media (max-width:400px) {
+            grid-template-columns: repeat(2,1fr);
+            gap: 50px;
+        }
+        @media (max-width:420px) {
+            grid-template-columns: repeat(2,1fr);
+            gap: 50px;
+        }
+        @media (max-width:460px) {
+            grid-template-columns: repeat(2,1fr);
+            gap: 50px;
+        }
+        @media (max-width:500px) {
+            grid-template-columns: repeat(2,1fr);
+            gap: 50px;
+        }
+        
+
+        h2 {
+            @include font64;
+            color: var(--theme-herobanner-icon-color);
+            text-align: right;
+
+            @media (max-width:768px) {
+                @include font24;
+                text-align: center;
+            }
+        }
+
+        p {
+            @include font24;
+            font-weight: 400;
+            text-align: right;
+
+            @media (max-width:768px) {
+                @include font12;
+                text-align: center;
+            }
+        }
+    }
+}

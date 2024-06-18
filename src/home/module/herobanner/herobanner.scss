@@ -1,0 +1,57 @@
+@import '../../../styles/main.scss';
+
+.herobanner {
+    @include flex;
+    background-image: url(../../../assets/images/ourstory-banner.9609ad8c.png);
+    height: 711px;
+    background-size: cover;
+    display: block;
+    background-repeat: no-repeat;
+
+    .herobanner-img {
+        @include flex;
+        flex-direction: column;
+        
+        @media (max-width:768px) {
+            padding: 0 11px;
+        }
+
+        h1 {
+            @include font120;
+            color: var(--theme-white-font-color);
+            margin-top: 300px;
+
+            @media (max-width:768px) {
+                @include font64;
+            }
+           
+        }
+
+        .herobannertext {
+            @include flex;
+            align-items: center;
+            gap: 12px;
+
+            .herobanner-text-icon {
+                background-color: var(--theme-herobanner-icon-color);
+                border-radius: 50%;
+                height: 18px;
+                width: 18px;
+            }
+
+            p {
+                max-width: 480px;
+                @include font18;
+                font-weight: 300;
+                color: var(--theme-white-font-color);
+
+                @media (max-width:768px) {
+                    @include font16;
+                    font-weight: 300;
+                    max-width: 319px;
+                }
+                
+            }
+        }
+    }
+}
